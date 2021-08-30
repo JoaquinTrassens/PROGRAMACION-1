@@ -1,0 +1,39 @@
+/******************************************************************************
+Trassens Joaquin
+*******************************************************************************/
+//EJERCICIO 3.1
+
+#include <stdio.h>
+int mostrarParidad(int num1);
+int main()
+{
+    int numero1;
+    printf("Ingrese numero para determinar su paridad:");
+    scanf("%d",&numero1);
+    if(mostrarParidad(numero1)==0)
+    {
+        printf("El numero es par.");
+    }else if(mostrarParidad(numero1)==1)
+    {
+        printf("EL numero es impar.");
+    }else
+    {
+        printf("ERROR");
+        
+    }
+    
+    return 0;
+}
+
+int mostrarParidad(int num1)
+{
+    int retornar;
+    if(num1%2==1)
+    {
+        retornar=1;
+    }else if(num1%2==0)
+    {
+        retornar=0;
+    }
+    return retornar;
+}
