@@ -6,6 +6,7 @@ EJERCICIO 5.1
 int sumar(int primerOperando, int segundoOperando);
 int restar(int primerOperando, int segundoOperando);
 int dividir(int primerOperando, int segundoOperando);
+int multiplicar(int primerOperando, int segundoOperando);
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
     int suma;
     int resta;
     int division;
+    int multiplicacion;
     do{
     printf("\t MENU DE OPCIONES \n");
     printf(" 1. Ingresar 1er operando\n 2. Ingresar 2do operando\n 3. Calcular todas las operaciones\n 4. Informar resultados\n 5. Salir\n");
@@ -35,15 +37,18 @@ int main()
             printf("calcular la suma de %d+%d\n",numero,numero2);
             printf("calcular la resta de %d-%d\n",numero,numero2);
             printf("calcular la division de %d/%d\n",numero,numero2);
+            printf("calcular la multiplicacion de %d*%d\n",numero,numero2);
             suma=sumar(numero,numero2);
             resta=restar(numero,numero2);
             division=dividir(numero,numero2);
+            multiplicacion=multiplicar(numero,numero2);
             break;
         case 4:
             printf("**Informacion de resultados**\n");
             printf("el resultado del %d+%d es: %d\n",numero,numero2,suma);
             printf("el resultado del %d-%d es: %d\n",numero,numero2,resta);
             printf("el resultado del %d/%d es: %d\n",numero,numero2,division);
+            printf("el resultado del %d*%d es: %d\n",numero,numero2,multiplicacion);
             break;
         case 5:
             printf("Usted ha seleccionado Salir\n");
@@ -69,13 +74,19 @@ int restar(int primerOperando, int segundoOperando)
 
 int dividir(int primerOperando, int segundoOperando)
 {
+    int resultado;
     if(segundoOperando==0)
     {
-     return printf("No es posible dividir por 0");
+     return printf("\n No es posible dividir por 0 ASHEEEE");
     }
-    else 
+    else if(segundoOperando!=0)
     {
      return resultado=primerOperando/segundoOperando;    
     }
-    
+}
+
+int multiplicar(int primerOperando, int segundoOperando)
+{
+    int resultado=primerOperando*segundoOperando;
+    return resultado;
 }
